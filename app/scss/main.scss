@@ -23,7 +23,6 @@ a {
   text-decoration: none;
 
   @include hover-focus {
-    color: black;
     text-decoration: none;
   }
 }
@@ -31,10 +30,11 @@ a {
 h1, h2 {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: normal;
 }
 
 // --------------------------------------------------
-// MAIN BODY 
+// MAIN
 // 
 
 body {
@@ -42,8 +42,13 @@ body {
   font-family: $font-family-base;
   background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
   @include sticky-footer-wrapper;
-
+  line-height: $line-height;
+  color: $p-color;
 }
+.main {
+  @include sticky-footer-content;
+}
+
 
 
 
@@ -52,35 +57,37 @@ body {
 // NAVIGATION 
 // 
 
-nav {
+nav { 
   @include container(%100);
-  padding-top: gutter(12 1/10);
-  padding-bottom: gutter(12 1/10);
-  text-align: center;
+  border-bottom: .5em solid $nav-color;
   background: $main-background;
+  text-align: center; 
   font-family: $font-family-navigation;
 
-  // border: 1px dotted green;
+  // border: 1px dotted green; 
 }
 
 .nav-item { 
   display: block;  // for small screens
-  padding: gutter(12 .15);
+  padding: gutter(12 .15) 0;
   color: $nav-color;
+
+  &:hover {
+    color: white;
+    background-color: $nav-color;
+    text-decoration: none;
+  }
 }
 
-// for 
 @include susy-breakpoint($md) {
   .nav-item {
-    display: inline;
-    @include gutter(12 1);
+    display: inline-block;
+    width: 150px;
+    float: none;
     
     // border: 1px dotted green;
   }
 }
-
-
-
 
 
 // --------------------------------------------------
@@ -101,7 +108,7 @@ nav {
 
   h1 {
     font-family: $font-family-banner;
-    font-size: 2em;
+    font-size: 2rem;
     padding-top: gutter(12 1);
   }
 
@@ -113,7 +120,7 @@ nav {
 
   @include susy-breakpoint($md) {
     h1 {
-      font-size: 4em;
+      font-size: 4rem;
     }
 
     h2 {
@@ -134,19 +141,44 @@ nav {
 
 
 // --------------------------------------------------
-// MAIN content
-//
-
-.main {
-  @include sticky-footer-content;
-}
-
-
-// --------------------------------------------------
 // FOOTER
 //
 
 footer {
 
   border: 1px dotted green; 
+}
+
+
+// --------------------------------------------------
+// SECTION
+//
+
+section {
+  @include container(55em);
+  @include box-shadow;
+  background-color: white;
+  padding-top: 1.75em;
+  padding-bottom: 1.75em;
+  margin-top: 2.5em;
+
+  .container {
+    @include span(10 of 12);
+    @include pre(1 of 12);
+  }
+
+  .sexy-line {
+    @include sexy-line;
+  }
+
+  h1 {
+    color: $h1-color;
+    text-align: center;
+    font-family: $font-family-navigation;
+  }
+
+  h2 {
+    color: $h2-color;
+    // font-family: $font-family-secion-h1;
+  }
 }

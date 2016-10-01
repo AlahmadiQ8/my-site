@@ -37,3 +37,28 @@
 @mixin sticky-footer-content {
   flex: 1;
 }
+
+
+// Add box Shadow
+// 
+// Ispiration: https://sketchtricks.com/ in testomonial section
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06);
+  -moz-box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06); 
+}
+
+
+// Sexy Line 
+// 
+// Source: https://css-tricks.com/simple-styles-for-horizontal-rules/
+// Transparent on the edges
+
+@mixin sexy-line { 
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $yellow-dark, rgba(0, 0, 0, 0));
+    width: 70%;
+    // margin-left: span();
+}

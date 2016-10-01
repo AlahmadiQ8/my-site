@@ -1,0 +1,39 @@
+
+// Center Vertical & Horizontal
+//
+// Parent container MUST have position: relative
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+
+@mixin img-fluid($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+// Responsive Sticky Footer
+//
+// Source: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+// Include the 1st mixin in a parent element that contains main content and footer
+// Add the 2nd mixin to the main content (right before the footer)
+
+@mixin sticky-footer-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+@mixin sticky-footer-content {
+  flex: 1;
+}

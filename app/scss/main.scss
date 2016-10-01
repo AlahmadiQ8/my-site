@@ -1,0 +1,152 @@
+@import "normalize";
+@import "~susy/sass/susy";
+@import "~breakpoint-sass/stylesheets/breakpoint";
+@import "variables";
+
+@import "mixins/link";
+@import "mixins/utilities";
+
+html {
+  font-size: $font-size-root;
+}
+
+$susy: (
+  columns: 12,
+  gutters: .2,
+  // gutter-position: split,
+  column-width: false,
+  global-box-sizing: border-box
+);
+
+a {
+  color: black;
+  text-decoration: none;
+
+  @include hover-focus {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// --------------------------------------------------
+// MAIN BODY 
+// 
+
+body {
+  // background: $lavender-light;
+  font-family: $font-family-base;
+  background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
+  @include sticky-footer-wrapper;
+
+}
+
+
+
+
+// --------------------------------------------------
+// NAVIGATION 
+// 
+
+nav {
+  @include container(%100);
+  padding-top: gutter(12 1/10);
+  padding-bottom: gutter(12 1/10);
+  text-align: center;
+  background: $main-background;
+  font-family: $font-family-navigation;
+
+  // border: 1px dotted green;
+}
+
+.nav-item { 
+  display: block;  // for small screens
+  padding: gutter(12 .15);
+  color: $nav-color;
+}
+
+// for 
+@include susy-breakpoint($md) {
+  .nav-item {
+    display: inline;
+    @include gutter(12 1);
+    
+    // border: 1px dotted green;
+  }
+}
+
+
+
+
+
+// --------------------------------------------------
+// BANNER 
+// 
+
+.banner {
+  // min-height: 25em;
+  background-color: $banner-color;
+  text-align: center;
+  color: white;
+
+  // border: 1px dotted green;
+
+  .container {
+    width: 100%;
+  }
+
+  h1 {
+    font-family: $font-family-banner;
+    font-size: 2em;
+    padding-top: gutter(12 1);
+  }
+
+  h2 {
+    font-size: $font-size-base;
+    font-weight: normal;
+    padding-top: gutter(12 1/10);
+  }
+
+  @include susy-breakpoint($md) {
+    h1 {
+      font-size: 4em;
+    }
+
+    h2 {
+      font-size: $font-size-lg;
+      font-weight: normal;
+    }
+  }
+
+  .img {
+    // margin: 0 auto;
+    margin-top: gutter(12 1/2);
+    min-height: 11em;
+    background: url(../img/animated_face_sm.png) center 0 no-repeat;
+
+    // border: 1px dotted green;
+  }
+}
+
+
+// --------------------------------------------------
+// MAIN content
+//
+
+.main {
+  @include sticky-footer-content;
+}
+
+
+// --------------------------------------------------
+// FOOTER
+//
+
+footer {
+
+  border: 1px dotted green; 
+}

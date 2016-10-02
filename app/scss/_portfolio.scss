@@ -1,0 +1,88 @@
+// --------------------------------------------------
+// SECTION
+//
+
+$context: 60%;
+
+section {
+  @include container(60%);
+  // @include box-shadow;
+  background-color: white;
+  padding-top: 1.70em;
+  padding-bottom: 1.75em;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+
+  .container {
+    width: 83%;
+    margin: 0 auto;
+  }
+
+  .custom-line {
+    // @include sexy-line;
+    @include custom-hr(5px, 50%){
+      background-color: $hr-color;
+      border-radius: 30px
+    }
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    color: $h1-color;
+    text-align: center;
+    font-family: $font-family-navigation;
+    font-weight: bold;
+    padding-bottom: .2em;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    color: $h2-color;
+    font-weight: bold;
+    font-family: $font-family-navigation;
+    margin-top: .8em;
+  }
+
+  h3 {
+    color: $h3-color;
+    // font-weight: bold;
+  }
+
+  p { 
+    margin-top: 1em;
+  }
+}
+
+// --------------------------------------------------
+// EXPERIENCE Section  
+// 
+
+.job-container {
+  @include container(100%);
+  margin: 1.5em 0;
+  text-align: center;
+  h2, p {
+    margin-top: 0;
+  }
+}
+
+.first-col {
+  @include col(40%);
+  text-align: right;
+  
+  padding-right: gutter(3em);
+}
+.second-col {
+  @include col(60%);
+  text-align: left;
+
+  padding-left: gutter(3em);
+  border-left: 5px solid $gray-lighter;
+  // border-left: 1px solid;
+}
+
+.duration {
+  font-size: $font-size-sm;
+  color: $yellow-dark;
+  // background-color: $yellow-dark;
+}

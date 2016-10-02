@@ -62,3 +62,23 @@
     width: 70%;
     // margin-left: span();
 }
+
+// Customize hr line
+// 
+// 
+@mixin custom-hr($height, $width: 100%) { 
+    border: 0;
+    height: $height;
+    width: $width;
+    @content;
+}
+
+// Custom col 
+// 
+// 
+@mixin col($width) {
+  display: inline-block;
+  width: span($width);
+  margin-left: -4px; //remove extra space;
+  vertical-align: top;
+}

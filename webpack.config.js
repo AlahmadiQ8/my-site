@@ -10,7 +10,7 @@ const parts = require('./libs/parts');
 
 const PATHS = {
   app: path.join(__dirname, 'app', 'js', 'index.js'),
-  style: path.join(__dirname, 'app', 'scss', 'main.scss'),
+  style: path.join(__dirname, 'app', 'scss', 'index.scss'),
   build: path.join(__dirname, 'build'),
 };
 

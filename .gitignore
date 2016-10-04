@@ -1,4 +1,4 @@
-build
+#build
 *.sketch
 
 # Node build artifacts

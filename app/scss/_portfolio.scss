@@ -5,7 +5,12 @@
 $context: 60%;
 
 section {
-  @include container(60%);
+  @include susy-breakpoint($md) {
+    @include container(65%);
+  }
+  @include susy-breakpoint($lg) {
+    @include container(60em);
+  }
   // @include box-shadow;
   background-color: white;
   padding-top: 1.70em;
@@ -14,7 +19,7 @@ section {
   margin-bottom: 2.25em;
 
   .container {
-    width: 83%;
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -24,6 +29,7 @@ section {
       background-color: $hr-color;
       border-radius: 30px
     }
+    margin-bottom: 3em;
   }
 
   h1 {
@@ -44,8 +50,9 @@ section {
   }
 
   h3 {
+    font-size: $font-size-h3;
     color: $h3-color;
-    // font-weight: bold;
+    font-weight: bold;
   }
 
   p { 
@@ -53,11 +60,7 @@ section {
   }
 }
 
-// --------------------------------------------------
-// EXPERIENCE Section  
-// 
-
-.job-container {
+.entry-container {
   @include container(100%);
   margin: 1.5em 0;
   text-align: center;
@@ -66,23 +69,70 @@ section {
   }
 }
 
-.first-col {
-  @include col(40%);
-  text-align: right;
-  
-  padding-right: gutter(3em);
+.col-left {
+  @include susy-breakpoint($md) {
+    text-align: right;
+    padding-right: gutter(3em);
+  }
 }
-.second-col {
-  @include col(60%);
-  text-align: left;
+.col-right {
+  @include susy-breakpoint($md) {
+    text-align: left;
+    padding-left: gutter(3em);
+    border-left: 5px solid $gray-lighter;
+  }
+}
 
-  padding-left: gutter(3em);
-  border-left: 5px solid $gray-lighter;
+
+
+// --------------------------------------------------
+// ABOUT ME Section
+//
+.col-left-about {
+  @include susy-breakpoint($md) {
+    @include col(20%);
+  }
+  @extend .col-left;
+}
+.col-right-about {
+  @include susy-breakpoint($md) {
+    @include col(80%);
+  }
+  @extend .col-right;
+}
+
+
+
+// --------------------------------------------------
+// EXPERIENCE Section  
+// 
+
+
+
+.col-left-job {
+  @include susy-breakpoint($md) {
+    @include col(40%);
+  }
+  @extend .col-left;
+}
+.col-right-job {
+  @include susy-breakpoint($md) {
+    @include col(60%);
+  }
+  @extend .col-right;
+  ul {
+    text-align: left;
+  }
+  
   // border-left: 1px solid;
 }
 
-.duration {
+.small-sub-text {
   font-size: $font-size-sm;
   color: $yellow-dark;
-  // background-color: $yellow-dark;
+  font-weight: normal;
+}
+.small-subsub-text {
+  font-size: $font-size-sm;
+  color: $gray-light;
 }

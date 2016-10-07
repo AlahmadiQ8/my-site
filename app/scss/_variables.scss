@@ -50,8 +50,9 @@ $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-ejs:            'Montserrat', sans-serif;
 
-$font-family-base:           $font-family-sans-serif !default;
-$font-family-banner:         'Redressed', cursive;
+$font-family-base:           'Varela Round', $font-family-sans-serif !default;
+// $font-family-banner:         'Redressed', cursive;
+$font-family-banner:         'Varela Round', $font-family-base;
 $font-family-navigation:     'Montserrat', sans-serif;
 $font-family-secion-h1:      'Varela Round', $font-family-base;
 
@@ -61,12 +62,13 @@ $font-size-root:             16px !default;
 
 $font-size-base:             1rem !default;
 $font-size-lg:               1.25rem !default;
+$font-size-md:               1.1rem !default;
 $font-size-sm:               .875rem !default;
 $font-size-xs:               .75rem !default;
 
 $font-size-h1:               2.2rem !default;
 $font-size-h2:               1.3rem !default;
-$font-size-h3:               1.15rem !default;
+$font-size-h3:               1.2rem !default;
 $font-size-h4:               1.5rem !default;
 $font-size-h5:               1.25rem !default;
 $font-size-h6:               1rem !default;

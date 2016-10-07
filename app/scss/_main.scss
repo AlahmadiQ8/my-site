@@ -34,6 +34,7 @@ body {
   // background: $lavender-light;
   font-family: $font-family-base;
   background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
+  background: #fff; 
   @include sticky-footer-wrapper;
   line-height: $line-height;
   color: $p-color;
@@ -64,8 +65,9 @@ nav {
 }
 
 .nav-item { 
+  font-size: $font-size-md;
   display: block;  // for small screens
-  padding: gutter(12 .15) 0;
+  padding: gutter(12 .5) 0;
   color: $nav-color;
   &:hover {
     color: white;
@@ -102,7 +104,7 @@ nav {
   h1 {
     font-family: $font-family-banner;
     font-size: 2rem;
-    padding-top: gutter(12 1);
+    padding-top: gutter(12 6);
     @include susy-breakpoint($md) {
       font-size: 4rem;
     }
@@ -120,7 +122,7 @@ nav {
 
   .img {
     // margin: 0 auto;
-    margin-top: gutter(12 1/2);
+    margin-top: gutter(12 6);
     min-height: 11em;
     background: url(../img/animated_face_sm.png) center 0 no-repeat;
 

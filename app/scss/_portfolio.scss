@@ -5,23 +5,24 @@
 $context: 60%;
 
 section {
-  @include susy-breakpoint($md) {
-    @include container(65%);
-  }
-  @include susy-breakpoint($lg) {
-    @include container(60em);
-  }
-  // @include box-shadow;
+  @include container(60em);
   background-color: white;
   padding-top: 1.70em;
-  padding-bottom: 1.75em;
   margin-top: 1.25em;
-  margin-bottom: 2.25em;
 
   .container {
     width: 85%;
     margin: 0 auto;
   }
+  @include susy-breakpoint($xl) {
+    font-size: $font-size-md;
+    .container {
+      width: 58em;
+      margin: 0 auto;
+    }
+  }
+
+
 
   .custom-line {
     // @include sexy-line;
@@ -37,14 +38,14 @@ section {
     color: $h1-color;
     text-align: center;
     font-family: $font-family-navigation;
-    font-weight: bold;
+    // font-weight: bold;
     padding-bottom: .2em;
   }
 
   h2 {
     font-size: $font-size-h2;
     color: $h2-color;
-    font-weight: bold;
+    // font-weight: bold;
     font-family: $font-family-navigation;
     margin-top: .8em;
   }
@@ -52,7 +53,8 @@ section {
   h3 {
     font-size: $font-size-h3;
     color: $h3-color;
-    font-weight: bold;
+    margin-bottom: .6em;
+    // font-weight: bold;
   }
 
   p { 
@@ -102,7 +104,6 @@ section {
 }
 
 
-
 // --------------------------------------------------
 // EXPERIENCE Section  
 // 
@@ -111,13 +112,13 @@ section {
 
 .col-left-job {
   @include susy-breakpoint($md) {
-    @include col(40%);
+    @include col(20%);
   }
   @extend .col-left;
 }
 .col-right-job {
   @include susy-breakpoint($md) {
-    @include col(60%);
+    @include col(80%);
   }
   @extend .col-right;
   ul {

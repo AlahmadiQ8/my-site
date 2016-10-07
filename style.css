@@ -402,8 +402,9 @@ h1, h2, p, h3 {
   font-weight: normal; }
 
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Varela Round", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #f0f3f5 url(img/pattern-subscribe.png) repeat 0 0;
+  background: #fff;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -430,8 +431,9 @@ nav {
       border-bottom: 0.5em solid #F1C476; } }
 
 .nav-item {
+  font-size: 1.1rem;
   display: block;
-  padding: 0.54348% 0;
+  padding: 1.38889% 0;
   color: #F1C476; }
   .nav-item:hover {
     color: white;
@@ -451,9 +453,9 @@ nav {
   .banner .container {
     width: 100%; }
   .banner h1 {
-    font-family: "Redressed", cursive;
+    font-family: "Varela Round", "Varela Round", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2rem;
-    padding-top: 2.08333%; }
+    padding-top: 3.57143%; }
     @media (min-width: 768px) {
       .banner h1 {
         font-size: 4rem; } }
@@ -466,7 +468,7 @@ nav {
         font-size: 1.25rem;
         font-weight: normal; } }
   .banner .img {
-    margin-top: 1.38889%;
+    margin-top: 3.57143%;
     min-height: 11em;
     background: url(img/animated_face_sm.png) center 0 no-repeat; }
 
@@ -474,32 +476,25 @@ footer {
   border: 1px dotted green; }
 
 section {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
   padding-top: 1.70em;
-  padding-bottom: 1.75em;
-  margin-top: 1.25em;
-  margin-bottom: 2.25em; }
-  @media (min-width: 768px) {
-    section {
-      max-width: 65%;
-      margin-left: auto;
-      margin-right: auto; }
-      section:after {
-        content: " ";
-        display: block;
-        clear: both; } }
-  @media (min-width: 992px) {
-    section {
-      max-width: 60em;
-      margin-left: auto;
-      margin-right: auto; }
-      section:after {
-        content: " ";
-        display: block;
-        clear: both; } }
+  margin-top: 1.25em; }
+  section:after {
+    content: " ";
+    display: block;
+    clear: both; }
   section .container {
     width: 85%;
     margin: 0 auto; }
+  @media (min-width: 1200px) {
+    section {
+      font-size: 1.1rem; }
+      section .container {
+        width: 58em;
+        margin: 0 auto; } }
   section .custom-line {
     border: 0;
     height: 5px;
@@ -512,18 +507,16 @@ section {
     color: #69AED1;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;
     padding-bottom: .2em; }
   section h2 {
     font-size: 1.3rem;
     color: #699;
-    font-weight: bold;
     font-family: "Montserrat", sans-serif;
     margin-top: .8em; }
   section h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #777999;
-    font-weight: bold; }
+    margin-bottom: .6em; }
   section p {
     margin-top: 1em; }
 
@@ -568,14 +561,14 @@ section {
 @media (min-width: 768px) {
   .col-left-job {
     display: inline-block;
-    width: 40%;
+    width: 20%;
     margin-left: -4px;
     vertical-align: top; } }
 
 @media (min-width: 768px) {
   .col-right-job {
     display: inline-block;
-    width: 60%;
+    width: 80%;
     margin-left: -4px;
     vertical-align: top; } }
 

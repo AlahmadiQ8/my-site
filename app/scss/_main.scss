@@ -59,9 +59,9 @@ nav {
   text-align: right; 
   font-family: $font-family-navigation;
   @include susy-breakpoint($md) {
-    // border-bottom: .5em solid $nav-color;
+    padding-right: 50px;
   }
-  padding-right: 50px;
+  
 
   // border: 1px dotted green; 
 }
@@ -98,7 +98,16 @@ nav {
 
 .home {
   margin-left: 30px;
-  float: left;
+  float: none;
+  text-align: center;
+  // display: block;
+  @include susy-breakpoint($md) {
+    // display: inline-block;
+    float: left;
+    //     padding-right: 15px;
+    // padding-left: 15px;
+  }
+  
   // font-size: 5rem;
 }
 

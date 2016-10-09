@@ -459,11 +459,11 @@ nav {
       float: none; } }
 
 .home {
-  margin-left: 30px;
   float: none;
   text-align: center; }
   @media (min-width: 768px) {
     .home {
+      margin-left: 30px;
       float: left; } }
 
 .banner {

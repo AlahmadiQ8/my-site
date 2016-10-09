@@ -31,10 +31,11 @@ h1, h2, p, h3 {
 // 
 
 body {
-  // background: $lavender-light;
+  line-height: $line-height;
+  font-size: $font-size-base;
   font-family: $font-family-base;
-  background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
-  background: #fff; 
+  // background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
+  // background: $gray-lightest; 
   @include sticky-footer-wrapper;
   line-height: $line-height;
   color: $p-color;
@@ -53,36 +54,53 @@ body {
 
 nav { 
   @include container(%100);
-  border-bottom: 2px solid $nav-color;
-  background: $main-background;
-  text-align: center; 
+  // border-bottom: 2px solid $nav-color;
+  background: $nav-background;
+  text-align: right; 
   font-family: $font-family-navigation;
   @include susy-breakpoint($md) {
-    border-bottom: .5em solid $nav-color;
+    // border-bottom: .5em solid $nav-color;
   }
+  padding-right: 50px;
 
   // border: 1px dotted green; 
 }
 
 .nav-item { 
-  font-size: $font-size-md;
-  display: block;  // for small screens
-  padding: gutter(12 .5) 0;
-  color: $nav-color;
-  &:hover {
-    color: white;
-    background-color: $nav-color;
-    text-decoration: none;
+  font-size: $font-size-base;
+  padding: gutter(12 1) 0;
+  padding-bottom: gutter(12 .2);
+  &, a {
+    color: $nav-color;  
   }
-  @include susy-breakpoint($md) {
-    display: inline-block;
-    width: 150px;
-    float: none;
+  
+  text-transform: lowercase;
+  text-transform: capitalize;
+  &:hover, a:hover {
+    color: $gray-light;
+    // background-color: $nav-color;
+    text-decoration: none;
   }
 
   // border: 1px dotted green;
 }
 
+.nav-item {
+  text-align: center; 
+  display: block;  // for small screens
+  @include susy-breakpoint($md) {
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: none;
+  }
+}
+
+.home {
+  margin-left: 30px;
+  float: left;
+  // font-size: 5rem;
+}
 
 // --------------------------------------------------
 // BANNER 
@@ -91,8 +109,10 @@ nav {
 .banner {
   // min-height: 25em;
   background-color: $banner-color;
+  background: $banner-background;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.06);
   text-align: center;
-  color: white;
+  color: $banner-color;
   margin-bottom: 1.25em;
 
   // border: 1px dotted green;

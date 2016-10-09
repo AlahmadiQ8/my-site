@@ -431,3 +431,9 @@ textarea {
   padding-left: 20px;
   // list-style: none;
  }
+ li {
+  margin-bottom: .3em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+ }

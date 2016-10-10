@@ -84,36 +84,24 @@ section {
   @include susy-breakpoint($md) {
     text-align: right;
     padding-right: gutter(3em);
-  }
-}
-.col-right {
-  @include susy-breakpoint($md) {
-    text-align: left;
-    padding-left: gutter(3em);
-    border-left: 5px solid $gray-light;
-  }
-  &::before{
-    // content: 'OMG OMG';
-  }
-}
-
-.col-left {
-  @include susy-breakpoint($md) {
     @include col(25%);
   }
   @include susy-breakpoint($mdlg) {
     @include col(20%);
   }
-  @extend .col-left;
+  // @extend .col-left;
 }
 .col-right {
+
   @include susy-breakpoint($md) {
+    text-align: left;
+    padding-left: gutter(3em);
+    border-left: 2px solid $section-mid-border-color;
     @include col(75%);
   }
   @include susy-breakpoint($mdlg) {
     @include col(80%);
   }
-  @extend .col-right;
   ul {
     text-align: left;
   }

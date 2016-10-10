@@ -6,11 +6,13 @@
  */
  
 $blue:                      #39ADD1 !default;
-$blue:                      rgb(127, 173, 242) !default;
+$blue-alt:                  rgb(127, 173, 242) !default;
+$blue-light:                #72D4FF;
+$blue-black:                #FFCDE7;
 // $green:                     rgb(117, 204, 31) !default;;
 $green:                     #5CB860 !default;
 $pink:                      #F092B0 !default;
-// $pink:                      #C25975 !default;
+$pink-dark:                 #C25975 !default;
 
 
 /* CYAN COLOR SCHEME
@@ -40,15 +42,19 @@ $gray-lightest:             #FCFCFC !default;
 
 /* THEME COLOR MAPPING
  */
-$banner-color:            $gray-dark;
+$banner-color:            $blue;
 $banner-background:       #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
-$nav-color:               $gray;
 
-$nav-background:          $gray-darkest;
-$h1-color:                $gray-darker;
-$h2-color:                $pink;
-$h3-color:                $gray-dark;
-$p-color:                 $gray;
+$nav-color:               $gray-light;
+$nav-hover-color:         $blue;
+$nav-background:          $pink-dark;
+
+$section-mid-border-color: $blue-black;
+
+$h1-color:                $blue;//$pink-dark;
+$h2-color:                $pink-dark;//$pink;
+$h3-color:                #253746;
+$p-color:                 $gray-darker;
 $hr-color:                $yellow-light;
 $sub-text-color:          $green;
 

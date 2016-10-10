@@ -73,7 +73,7 @@ nav {
   text-transform: lowercase;
   text-transform: capitalize;
   &:hover, a:hover {
-    color: $gray-light;
+    color: $nav-hover-color;
     text-decoration: none;
   }
 }

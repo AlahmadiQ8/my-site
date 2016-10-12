@@ -12,3 +12,10 @@
     @content
   }
 }
+
+@mixin hover {
+  &:focus,
+  &:hover {
+    @content
+  }
+}

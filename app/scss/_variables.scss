@@ -42,21 +42,23 @@ $gray-lightest:             #FCFCFC !default;
 
 /* THEME COLOR MAPPING
  */
-$banner-color:            $blue;
+$banner-color:            $gray-dark;
 $banner-background:       #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
 
 $nav-color:               $gray-light;
-$nav-hover-color:         $blue;
-$nav-background:          $pink-dark;
+$nav-hover-color:         $gray;
+$nav-background:          $gray-darkest;
 
-$section-mid-border-color: $blue-black;
+$section-mid-border-color: $gray-light;
 
-$h1-color:                $blue;//$pink-dark;
-$h2-color:                $pink-dark;//$pink;
+$h1-color:                black;//$pink-dark;
+$h2-color:                $gray-darkest;//$pink;
 $h3-color:                #253746;
 $p-color:                 $gray-darker;
 $hr-color:                $yellow-light;
-$sub-text-color:          $green;
+$sub-text-color:          $gray;
+$link-color:              $blue;
+$hover-color:             $blue-light;
 
 
 
@@ -95,7 +97,7 @@ $font-size-h4:               1.5rem !default;
 $font-size-h5:               1.25rem !default;
 $font-size-h6:               1rem !default;
 
-$line-height:                1.9em !default;
+$line-height:                1.6em !default;
 
 
 

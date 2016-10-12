@@ -15,14 +15,15 @@ section {
   margin-top: 1.25em;
 
   .container {
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
   }
   @include susy-breakpoint($xl) {
     font-size: $font-size-md;
     .container {
-      width: 58em;
-      margin: 0 auto;
+      width: 100%;
+      // margin: 0 auto;
+      margin-left: -80px;
     }
   }
 

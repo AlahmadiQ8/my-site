@@ -12,10 +12,11 @@ $susy: (
 @include border-box-sizing;
 
 a {
-  color: black;
+  color: $link-color;
   text-decoration: none;
 
-  @include hover-focus {
+  &:hover {
+    color: $hover-color;
     text-decoration: none;
   }
 }

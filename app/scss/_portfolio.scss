@@ -101,7 +101,7 @@ section {
     @include col(75%);
   }
   @include susy-breakpoint($mdlg) {
-    @include col(80%);
+    @include col(75%);
   }
   ul {
     text-align: left;

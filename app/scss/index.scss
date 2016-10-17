@@ -1,10 +1,15 @@
-@import "normalize";
 @import "~susy/sass/susy";
 @import "~breakpoint-sass/stylesheets/breakpoint";
-@import "variables";
 
-@import "mixins/link";
-@import "mixins/utilities";
+@import "abstracts/variables";
+@import "abstracts/link";
+@import "abstracts/utilities";
 
-@import "main";
-@import "portfolio";
+@import "base/normalize";
+@import "base/base";
+
+@import "layout/navigation";
+@import "layout/banner";
+@import "layout/footer";
+
+@import "pages/portfolio";

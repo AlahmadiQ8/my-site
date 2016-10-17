@@ -1,0 +1,66 @@
+
+html {
+  font-size: $font-size-root;
+}
+
+$susy: (
+  columns: 12,
+  gutters: .2,
+  gutter-position: split,
+  global-box-sizing: border-box
+);
+@include border-box-sizing;
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+}
+
+h1, h2, p, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+p, ul, li {
+  font-size: $content-size;
+}
+p {
+  margin-bottom: .6em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// --------------------------------------------------
+// MAIN
+// 
+
+body {
+  line-height: $line-height;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  // background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
+  // background: $gray-lightest; 
+  @include sticky-footer-wrapper;
+  line-height: $line-height;
+  color: $p-color;
+}
+.main {
+  @include sticky-footer-content;
+}
+
+
+
+
+
+
+
+
+
+

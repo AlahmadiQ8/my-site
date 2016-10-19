@@ -42,13 +42,13 @@ $gray-lightest:             #FCFCFC !default;
 
 /* THEME COLOR MAPPING
  */
-$banner-color:            $pink-dark;//$gray-dark;
-$banner-background:       #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
+$banner-color:            $pink;//$gray-dark;
+$banner-background:       $gray-darkest url(../img/my-pattern.png) repeat 0 0;
 
 
-$nav-color:               $gray-light;
+$nav-color:               $pink-dark;//$gray-darker;
 $nav-hover-color:         $gray;
-$nav-background:          $gray-darkest;
+$nav-background:          $gray-lighter;
 
 $section-mid-border-color: $gray-light;
 
@@ -58,9 +58,10 @@ $h3-color:                #253746;
 $p-color:                 $gray-dark;
 $hr-color:                $yellow-light;
 $sub-text-color:          $gray;
+
 $link-color:              $blue;
 $hover-color:             $blue-light;
-
+$special-link-color:      $pink;
 
 
 

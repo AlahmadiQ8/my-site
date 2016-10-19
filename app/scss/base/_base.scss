@@ -14,6 +14,7 @@ $susy: (
 a {
   color: $link-color;
   text-decoration: none;
+  transition: color 300ms 0s ease;
 
   &:hover {
     color: $hover-color;

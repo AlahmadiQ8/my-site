@@ -33,7 +33,14 @@ const common = {
       {
         test: /\.(jpg|png)$/,
         loader: 'file?name=img/[name].[ext]'
-        // include: PATHS.images
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file?name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file?name=fonts/[name].[ext]'
       }
     ]
   },

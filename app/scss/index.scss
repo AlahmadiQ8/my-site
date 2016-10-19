@@ -1,5 +1,8 @@
 @import "~susy/sass/susy";
 @import "~breakpoint-sass/stylesheets/breakpoint";
+@import "~hover.css/css/hover";
+
+@import "vendor/font-awesome/font-awesome";
 
 @import "abstracts/variables";
 @import "abstracts/link";
@@ -7,6 +10,8 @@
 
 @import "base/normalize";
 @import "base/base";
+
+@import "components/tags";
 
 @import "layout/navigation";
 @import "layout/banner";

@@ -38,10 +38,24 @@
 
   .img {
     // margin: 0 auto;
-    margin-top: gutter(12 6);
+    margin-top: 30px;
     min-height: 11em;
     background: url(../img/animated_face_sm.png) center 0 no-repeat;
 
     // border: 1px dotted green;
+  }
+
+  .social-list{
+    margin-top: 2.7em;
+  }
+  .social-item{
+    display: inline-block;
+    font-size: 2.5em;
+    padding: 0 .25em 0 .25em;
+    // &:hover {
+      
+    //   color: $hover-color;
+    //   text-decoration: none;
+    // }
   }
 }

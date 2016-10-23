@@ -16,7 +16,8 @@ module.exports = {
         includePaths: ["node_modules/susy/sass", 
                      "node_modules/breakpoint-sass/stylesheets", 
                      "node_modules/hover.css/css"], // tell sass-brunch where to look for files to @import
-      }
+      },
+      debug: 'debug'
     }
   },
 

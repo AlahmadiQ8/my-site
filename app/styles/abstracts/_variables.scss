@@ -8,7 +8,7 @@
 $blue:                      #39ADD1 !default;
 $blue-alt:                  rgb(127, 173, 242) !default;
 $blue-light:                #72D4FF;
-$blue-black:                #FFCDE7;
+$blue-black:                #253746;
 // $green:                     rgb(117, 204, 31) !default;;
 $green:                     #5CB860 !default;
 $pink:                      #F092B0 !default;
@@ -55,7 +55,7 @@ $section-mid-border-color: $gray-light;
 $h1-color:                $pink-dark;
 $h2-color:                $gray-darker;//$pink;
 $h3-color:                #253746;
-$p-color:                 $gray-dark;
+$p-color:                 #333;
 $hr-color:                $yellow-light;
 $sub-text-color:          $gray;
 
@@ -86,7 +86,7 @@ $font-family-secion-h2:      'Montserrat', sans-serif;//'Varela Round', $font-fa
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root:             16px !default;
 
-$font-size-base:             1rem !default;
+$font-size-base:             1.13rem !default;
 $font-size-lg:               1.25rem !default;
 $font-size-md:               1.1rem !default;
 $font-size-sm:               .875rem !default;

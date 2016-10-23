@@ -2,27 +2,19 @@
 // BANNER 
 // 
 
-.title {
-  float: left;
-}
-.avatar {
-  float: right;
-}
-
-  // min-height: 25em;
-  
-  // background-color: $banner-color;
-  // background: $banner-background;
-  // box-shadow: inset 0 -1px 0 rgba(0,0,0,0.06);
-  // text-align: center;
-  // color: $banner-color;
-  // margin-bottom: 1.25em;
-
-  // border: 1px dotted green;
-
 .profile {
+  background: $blue-black;
+  border: none;
   h1 {
     line-height: 1em;
+    font-size: 2rem;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
   }
 }
 
@@ -31,12 +23,15 @@
 }
 
 .social-list{
-  margin-top: .5em;
+  margin-top: 1em;
   margin-bottom: .5em;
-  // text-align: center;
 }
 .social-item{
   display: inline;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding: 0 .25em 0 .25em;
+}
+
+.short-about p {
+  font-weight: 300;
 }

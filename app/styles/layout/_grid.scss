@@ -2,7 +2,7 @@
 
 #container {
   @include container(90%);
-  border: 1px dashed #333;
+  margin-top:18px;
   @include susy-breakpoint($md) {
     @include container(700px);
   }
@@ -13,10 +13,8 @@
 
 .row {
   @include container(100%);
-  border: 1px dashed #333;
-  overflow: hidden;
+  // border: 1px dashed #333;
   display: block;
-  justify-content: space-between;
   margin-bottom: gutter(12 .1);
   &:last-child {
     margin-bottom: 0;
@@ -27,8 +25,8 @@
 }
 
 .col {
-  padding: 30px;
-  border: 1px dashed red;
+  @extend %border;
+  padding: 25px;
   margin-bottom: gutter(12 .1);
   &:last-child {
     margin-right: 0;

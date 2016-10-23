@@ -28,9 +28,10 @@ h1, h2, p, h3 {
 }
 
 p, ul, li {
-  font-size: $content-size;
+  font-size: $font-size-base;
 }
 p {
+  color: $p-color;
   margin-bottom: .6em;
   &:last-child {
     margin-bottom: 0;

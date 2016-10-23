@@ -5,8 +5,7 @@ html {
 
 $susy: (
   columns: 12,
-  gutters: .2,
-  gutter-position: split,
+  gutters: .1,
   global-box-sizing: border-box
 );
 @include border-box-sizing;

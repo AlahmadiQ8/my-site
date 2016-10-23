@@ -8,8 +8,9 @@
     "url": ""
   },
   "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "start": "brunch watch -d --server",
+    "build": "brunch build --production",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "breakpoint-sass": "^2.7.0",
@@ -18,11 +19,12 @@
     "susy": "^2.2.12"
   },
   "devDependencies": {
+    "auto-reload-brunch": "^2.0.0",
     "brunch": "^2.0.0",
-    "javascript-brunch": "^2.0.0",
-    "css-brunch": "^2.0.0",
-    "uglify-js-brunch": "^2.0.0",
     "clean-css-brunch": "^2.0.0",
-    "auto-reload-brunch": "^2.0.0"
+    "css-brunch": "^2.0.0",
+    "gh-pages": "^0.11.0",
+    "javascript-brunch": "^2.0.0",
+    "uglify-js-brunch": "^2.0.0"
   }
 }

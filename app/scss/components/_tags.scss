@@ -2,7 +2,10 @@
 .tags {
   display: inline-block;
   font-size: $content-size - 0.2rem;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.4em;
+  &:last-child{
+    margin-bottom: .5em;
+  }
 }
 .tag-item {
   border: 1px solid $gray;

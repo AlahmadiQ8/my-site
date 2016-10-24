@@ -10,7 +10,8 @@
   "scripts": {
     "start": "brunch watch -d --server",
     "build": "brunch build --production",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "bd": "npm run build && npm run deploy"
   },
   "dependencies": {
     "breakpoint-sass": "^2.7.0",

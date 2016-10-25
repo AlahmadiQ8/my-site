@@ -1,6 +1,10 @@
 
 body{
   @extend %sticky-footer-wrapper;
+  padding: 0 10px;
+  @include breakpoint($lg) {
+    padding: 0;
+  }
 }
 
 %border {
@@ -9,16 +13,11 @@ body{
 
 #main-container {
   @extend %sticky-footer-content;
+  width: 100%;
+  max-width: $main-width;
   margin-top:18px;
-  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  @include breakpoint($md) {
-    max-width: 700px;
-  }
-  @include breakpoint($lg) {
-    max-width: $main-width;
-  }
 }
 
 .container {
@@ -26,35 +25,34 @@ body{
   align-items: stretch; 
   flex-direction: column;
   margin-bottom: 0;
+  margin-right: -$gutter-px;
   @include breakpoint($lg) {
     flex-direction: row;
-    margin-bottom: $gutter-px;
   }
 }
 
 %cell-padding {
   padding: 25px;
-  margin-right: 0;
+  margin-right: $gutter-px;
   margin-bottom: $gutter-px;
-  &:last-child {
-    margin-right: 0;
-  } 
-  @include breakpoint($lg) {
-    margin-right: $gutter-px;
-    margin-bottom: 0;
-  }
+}
+
+%cell-common {
+  flex-direction: row; 
+  flex: 1 1 auto;
 }
 
 @for $i from 1 through $columns {
   .cell-#{$i}{
     @extend %cell-padding;
     @extend %border;
-    flex: 1 1 auto;
+    @extend %cell-common;
     flex-basis: ($multiplier - $gutter) * $i;
   }  
   .cell-#{$i}-nopadding{
-    // @extend %border;
-    flex: 1 1 auto;
+    @extend %cell-common;
+    display: flex;
+    flex-flow: row nowrap;
     flex-basis: ($multiplier - $gutter) * $i;
   }  
 }
@@ -63,13 +61,6 @@ body{
   display: flex;
   flex-direction: column; 
   align-items: stretch;
-  > * { 
-    margin-right: 0;
-    margin-bottom: $gutter-px;
-  }
-  > *:last-child{
-    margin-bottom: 0; 
-  }
 }
 
 .col-flex {

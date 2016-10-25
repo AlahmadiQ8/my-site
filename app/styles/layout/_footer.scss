@@ -3,5 +3,15 @@
 //
 
 footer {
-  border: 1px dotted green; 
+  width: 100%;
+  max-width: $main-width;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; 
+  justify-content: space-around;
+  padding: 10px;
+  @extend %border;
+  p {
+    font-size: $font-size-sm;
+  }
 }

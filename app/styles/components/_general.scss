@@ -1,0 +1,16 @@
+
+.tag-link {
+  color: $gray-dark;
+  font-weight: 400;
+  &:hover {
+    color: $gray;
+  }
+  &:before{
+    content: "#";
+  }
+}
+
+
+.secondary {
+  color: $gray;
+}

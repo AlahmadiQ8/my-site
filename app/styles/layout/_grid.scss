@@ -1,66 +1,90 @@
 
+body{
+  @extend %sticky-footer-wrapper;
+}
 
-#container {
-  @include container(90%);
+%border {
+  border: 1px dashed #bbb;
+}
+
+#main-container {
+  @extend %sticky-footer-content;
   margin-top:18px;
-  @include susy-breakpoint($md) {
-    @include container(700px);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint($md) {
+    max-width: 700px;
   }
-  @include susy-breakpoint($lg) {
-    @include container(1000px);
-  }
-}
-
-.row {
-  @include container(100%);
-  // border: 1px dashed #333;
-  display: block;
-  margin-bottom: gutter(12 .1);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  @include susy-breakpoint($lg) {
-    display: flex;
+  @include breakpoint($lg) {
+    max-width: $main-width;
   }
 }
 
-.col {
-  @extend %border;
+.container {
+  display: flex;
+  align-items: stretch; 
+  flex-direction: column;
+  margin-bottom: 0;
+  @include breakpoint($lg) {
+    flex-direction: row;
+    margin-bottom: $gutter-px;
+  }
+}
+
+%cell-padding {
   padding: 25px;
-  margin-bottom: gutter(12 .1);
+  margin-right: 0;
+  margin-bottom: $gutter-px;
   &:last-child {
     margin-right: 0;
-    margin-bottom: 0;
-  }
-  @include susy-breakpoint($lg) {
+  } 
+  @include breakpoint($lg) {
+    margin-right: $gutter-px;
     margin-bottom: 0;
   }
 }
 
-@for $i from 1 through 12 {
-  .col-#{$i}{
-    @include span(12);
+@for $i from 1 through $columns {
+  .cell-#{$i}{
+    @extend %cell-padding;
+    @extend %border;
+    flex: 1 1 auto;
+    flex-basis: ($multiplier - $gutter) * $i;
   }  
-  @include susy-breakpoint($lg) {
-    .col-#{$i}{
-      @include span($i);
-    }
+  .cell-#{$i}-nopadding{
+    // @extend %border;
+    flex: 1 1 auto;
+    flex-basis: ($multiplier - $gutter) * $i;
+  }  
+}
+
+.vertical-stretch {
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch;
+  > * { 
+    margin-right: 0;
+    margin-bottom: $gutter-px;
+  }
+  > *:last-child{
+    margin-bottom: 0; 
   }
 }
 
 .col-flex {
   display: flex;
   justify-content: space-around;
+  flex-direction: row wrap;
   flex-direction: column;
-  @include susy-breakpoint($sm) {
+  @include breakpoint($sm) {
     flex-direction: row;
+    justify-content: space-around;
+  }
+  @include breakpoint($lg) {
+    justify-content: space-between;
   }
   * {
     align-self: center;
   }
-}
-
-.inline-block {
-  display: inline-block;
-  margin-left: -4px;
 }

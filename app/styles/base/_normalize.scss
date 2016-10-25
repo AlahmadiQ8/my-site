@@ -425,15 +425,3 @@ textarea {
  * Remove deafult list styles, margins and padding
  */
 
- ol,
- ul {
-  margin: 0;
-  padding-left: 20px;
-  // list-style: none;
- }
- li {
-  margin-bottom: .3em;
-  &:last-child {
-    margin-bottom: 0;
-  }
- }

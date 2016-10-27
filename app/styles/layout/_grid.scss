@@ -22,6 +22,7 @@ body{
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch; 
   flex-direction: column;
   margin-bottom: 0;
@@ -40,6 +41,7 @@ body{
 %cell-common {
   flex-direction: row; 
   flex: 1 1 auto;
+  flex-shrink: 0;
 }
 
 @for $i from 1 through $columns {
@@ -53,7 +55,7 @@ body{
     @extend %cell-common;
     display: flex;
     flex-flow: row nowrap;
-    flex-basis: ($multiplier - $gutter) * $i;
+    flex-basis: ($multiplier - $gutter*2) * $i;
   }  
 }
 
@@ -78,4 +80,12 @@ body{
   * {
     align-self: center;
   }
+}
+
+.col-no-stretch {
+  flex-grow: 0;
+}
+
+.center-cols {
+  justify-content: center; 
 }

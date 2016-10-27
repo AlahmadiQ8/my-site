@@ -14,7 +14,6 @@ $green:                     #5CB860 !default;
 $pink:                      #F092B0 !default;
 $pink-dark:                 #C25975 !default;
 
-
 /* CYAN COLOR SCHEME
  */
 $cyan:                      #69AED1 !default;   // main banner, links, buttons
@@ -42,26 +41,13 @@ $gray-lightest:             #FCFCFC !default;
 
 /* THEME COLOR MAPPING
  */
-$banner-color:            $pink;//$gray-dark;
-$banner-background:       $gray-darkest url(../img/my-pattern.png) repeat 0 0;
-
-//#f14a29
-$nav-color:               $pink-dark;//$gray-darker;
-$nav-hover-color:         $gray;
-$nav-background:          $gray-lighter;
-
-$section-mid-border-color: $gray-light;
-
 $h1-color:                $pink-dark;
 $h2-color:                $pink-dark;//$red;//$pink;
 $h3-color:                #333;
 $p-color:                 #333;
-$hr-color:                $yellow-light;
-$sub-text-color:          $gray;
 
 $link-color:              $blue;
 $hover-color:             $blue-light;
-$special-link-color:      $pink;
 
 
 
@@ -88,14 +74,17 @@ $font-size-root:             16px !default;
 
 $font-size-base:             1.13rem !default;
 // $font-size-lg:               1.25rem !default;
+$font-size-md:               1rem !default;
 $font-size-sm:               .875rem !default;
-// $font-size-xs:               .75rem !default;
+$font-size-xs:               .75rem !default;
 
 $font-size-h1:               1.7rem !default;
 $font-size-h2:               2.8rem !default;
 $font-size-h3:               1.3rem !default;
 
 $line-height:                1.4em !default;
+$line-height-h1:             1.2em !default;
+$line-height-h2:             1.2em !default;
 
 
 

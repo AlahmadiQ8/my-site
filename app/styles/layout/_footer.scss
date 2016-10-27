@@ -11,6 +11,9 @@ footer {
   justify-content: space-around;
   padding: 10px;
   @extend %border;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   p {
     font-size: $font-size-sm;
   }

@@ -3,19 +3,20 @@
 @import "hover";
 
 @import "vendor/font-awesome/font-awesome";
+@import "vendor/normalize";
 
 @import "abstracts/variables";
 @import "abstracts/utilities";
 @import "abstracts/placeholders";
 
-@import "base/normalize";
-@import "base/base";
 
-@import "components/general";
+@import "base/base";
 
 @import "layout/grid";
 @import "layout/footer";
 @import "layout/banner";
 @import "layout/footer";
+
+@import "components/general";
 
 // @import "pages/portfolio";

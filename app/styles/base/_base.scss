@@ -4,7 +4,11 @@ html {
 }
 
 
-@include border-box-sizing;
+*, :after, :before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
  ol,
  ul {
@@ -38,13 +42,17 @@ h1, h2, p, h3 {
 }
 
 h1 {
-
+  font-size: 2rem;;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: $h2-color;
+  line-height: $line-height-h1;
 }
 h2 {
-  font-size: $font-size-h2;
+  font-size: $font-size-h3;
   font-weight: bold;
-  margin-bottom: 0.6em;
-  color: $h2-color;
+  margin-bottom: 0.5em;
+  color: $h3-color;
 }
 
 h3 { 
@@ -66,30 +74,17 @@ p {
   }
 }
 
-// --------------------------------------------------
-// MAIN
-// 
-
 body {
   line-height: $line-height;
   font-size: $font-size-base;
   font-family: $font-family-base;
-  // background: #f0f3f5 url(../img/pattern-subscribe.png) repeat 0 0; 
-  // background: $gray-lightest; 
-  @include sticky-footer-wrapper;
-  line-height: $line-height;
   color: $p-color;
 }
-.main {
-  @include sticky-footer-content;
+
+.small-text * {
+  font-size: $font-size-sm;
 }
 
-
-
-
-
-
-
-
-
-
+.align-center{
+  text-align: center;
+}

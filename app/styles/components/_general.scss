@@ -8,9 +8,51 @@
   &:before{
     content: "#";
   }
+  &:after{
+    content: "\00a0";
+  }
 }
 
 
 .secondary {
   color: $gray;
+}
+
+article {
+  border-left: none !important;
+  border-right: none !important;
+
+  .article-content {
+    width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+    @include breakpoint($md) {
+      width: 65% !important;
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6em;
+  }
+  h2 {
+    // margin-bottom: .5em;
+    // font-size: 2rem;
+  }
+}
+
+.sidebar {
+  p, ul, li {
+    font-size: $font-size-md;
+  }
+}
+
+.article-details {
+  // font-size: $font-size-sm;
+  color: $gray;
+  strong{
+    font-weight: bolder;
+  }
+  span {
+    margin-right: 1em;
+  }
 }
